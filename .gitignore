@@ -1,0 +1,113 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local overrides
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime / process files
+*.pid
+*.pid.lock
+*.seed
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Editor / IDE files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Temporary files and caches
+.cache/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# PWA / Workbox generated development artifacts
+dev-dist/
+workbox-*.js
+workbox-*.js.map
+sw.js.map
+
+# Analysis / generated reports
+lighthouse-report*.html
+lighthouse-report*.json
+eslint-report.*
+
+# Local certificates and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# Package-manager caches
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+
+# Keep package manager lockfile tracked
+# package-lock.json MUST be committed for reproducible npm installs.
+
+# Local GitHub tooling
+.github/.local/
+
+# Miscellaneous archives generated locally
+*.tgz
+
+# IMPORTANT SECURITY NOTE:
+# .gitignore is not a security boundary. Never store passwords, credentials,
+# API secrets, private keys, generated password history, or sensitive test
+# fixtures anywhere in this repository, even if the path is ignored.
