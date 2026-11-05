@@ -63,6 +63,7 @@ Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 Desktop.ini
+*:Zone.Identifier
 
 # Temporary files and caches
 .cache/
@@ -103,6 +104,11 @@ eslint-report.*
 
 # Local GitHub tooling
 .github/.local/
+
+# OpenCode local configuration (developer-specific, not shared)
+opencode.json
+opencode.jsonc
+.opencode/
 
 # Miscellaneous archives generated locally
 *.tgz

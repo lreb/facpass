@@ -9,7 +9,8 @@ Owner: Project Team
 
 FacPass is a privacy-first password generator and security analyzer designed as a browser-only Progressive Web App for deployment on GitHub Pages.
 
-The project is currently in the specification phase. The repository documentation is the source of truth for implementation.
+The repository documentation is the source of truth for requirements and security decisions. The
+version 1 application is implemented and release verification is in progress.
 
 ## Product principles
 
@@ -40,9 +41,33 @@ The project is currently in the specification phase. The repository documentatio
 - UI: `UX.md`, `DESIGN-SYSTEM.md`, `RESPONSIVE.md`, `ACCESSIBILITY.md`
 - PWA/deployment: `PWA.md`, `DEPLOYMENT.md`
 
-## Planned stack
+## Stack
 
 React, TypeScript, Vite, Tailwind CSS, Web Crypto API, `vite-plugin-pwa`, Vitest, React Testing Library, Playwright, GitHub Actions, and GitHub Pages.
+
+## Development
+
+Requirements: Node.js 24 or newer and npm.
+
+```bash
+npm ci
+npm run dev
+```
+
+Quality checks:
+
+```bash
+npm run check
+```
+
+`npm run check` runs type checking, linting, unit and component tests, the security scan, and the production build. Use `npm run format:check` to verify formatting.
+
+End-to-end checks:
+
+```bash
+npx playwright install --with-deps chromium
+npm run test:e2e
+```
 
 ## Current status
 
@@ -51,7 +76,14 @@ React, TypeScript, Vite, Tailwind CSS, Web Crypto API, `vite-plugin-pwa`, Vitest
 - Security specification: complete
 - UX specification: complete
 - Engineering specification: complete
-- Application implementation: not started
+- Version 1 implementation: complete
+- Automated verification: passing (unit, component, security scan, build, Playwright)
+- Deployment: pending GitHub Pages and DNS configuration for `facpass.facware.com`
+
+## Third-party data
+
+Passphrase generation uses the EFF Large Wordlist (CC BY 3.0 US). Common-password checks use data
+from SecLists (MIT). See `NOTICE` for attribution and license details.
 
 ## Critical rule
 
